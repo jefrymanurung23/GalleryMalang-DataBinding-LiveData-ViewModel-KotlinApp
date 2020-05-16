@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="GalleryBinding">
+        <variable
+            name="galerymodel"
+            type="com.manurung.testmagangandroiddot.viewmodel.GalleryViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            app:thumbnailUrl="@{galerymodel.thumbnail}"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            app:imageUrl="@{galerymodel.image}"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+</layout>
